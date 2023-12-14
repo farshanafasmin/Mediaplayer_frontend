@@ -1,0 +1,116 @@
+
+
+create a web application using React js with below problem statements
+
+
+
+
+1.user can create add delete edit 
+
+2.the card must contain name and a video mp3 or mp3 link
+
+3.the user has the flexibility to create the bucket to categories and card according to his/her choice
+
+4.user can move a card to different bucket
+
+5.on clicking on the card a model with an iframe should open which start playing video
+
+6.user can create and delete a single card or multiple card under a single bucket at once
+
+7.there should be a seperate tab called history which list the mp3 or mp4 or links that you have played
+
+        i.e., the card name,the link and the item was played
+
+
+
+        Tech Stack
+      ---------------
+
+
+      1.front-end     :React
+      2.back-end      :create and use json server
+
+
+
+
+   1.install react router dom
+   2.enclose the main component to be render to the browser inside browserrouter tag
+   3.if we have to set path for one or more components  place them in </Routes> 
+
+
+
+
+
+
+
+
+
+
+               api call using axios library
+              ------------------------------ 
+
+
+   features
+  ----------
+  *make XMLHttpRequests from the rowser
+  *male http request from node.js
+  *supports the promise api
+  *intercept request and response
+  *transform request and response data
+  *cancel request
+  *automatic transforms for json data
+  *automatic data object serialization to multipart/form-data and x-www-form-url-encoded 
+
+
+
+ step for common api call
+   Request config
+  ---------------- 
+
+step1:
+
+  * `url` is the server URL that will be used for the request
+  url: '/user',
+
+  * `method` is the request method to be used when making the request
+  method: 'get', // default
+
+  * `headers` are custom headers to be sent(which type of data is sent through the url)
+  headers: {'X-Requested-With': 'XMLHttpRequest'},
+
+
+ * `data` is the data to be sent as the request body
+   Only applicable for request methods 'PUT', 'POST', 'DELETE , and 'PATCH'
+   When no `transformRequest` is set, must be of one of the following types:
+   - string, plain object, ArrayBuffer, ArrayBufferView, URLSearchParams
+   - Browser only: FormData, File, Blob
+   - Node only: Stream, Buffer, FormData (form-data package)
+  data: {
+    firstName: 'Fred'
+  },
+
+
+
+  spread operator:...
+
+
+  oru statel object key value pair aayiitanu koduthath tnkil oru keyil value enter cheythal baakki ullath empty aakkan
+
+
+*child to child data sharing is not possible
+*state lifting :to share data btween siblings we use state lifting.data from the child passed to parent(home) and the data shared to the other child(parent to child)
+
+                    watch history
+                   ---------------- 
+
+
+
+         1. create a watch history tab or link in home page
+         
+         2.create a new component for watch history
+
+                  data in table format(id,cardname,url,date5)
+
+         3.create a watch history key in db.json and value as array
+
+         4.when we click on the card ,add data to db.json then ,get watch history from json file
